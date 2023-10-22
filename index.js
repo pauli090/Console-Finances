@@ -100,3 +100,20 @@ for (var i = 0; i < finances.length; i++) {
   sum += finances[i][1];
 }
 console.log("Total: $" + sum);
+
+// Calculating tThe average of the changes in Profit/Losses over the entire period.
+
+var differences = 0;
+
+for (var i = 0; i < finances.length - 1; i++) {
+  differences = differences + finances[i+1][1] - finances[i][1];
+  
+}
+
+var average = differences / (finances.length - 1);
+
+//  'toFixed(2)' rounds the decimal number to two numbers after point
+
+console.log("Average Change: " + average.toFixed(2)); 
+
+
