@@ -7,13 +7,14 @@ Base on a financial dataset, creating code for analysing the financial records o
 
 ## Instalation
 
-Link to website [FINANCES]() 
+Link to website [FINANCES](https://pauli090.github.io/Console-Finances/) 
+Open the console to see the final code.
 
 ## Usage
 
 A JavaScript code for analyzing the provided financial records. Final code prints the analysis to the console.
 
-![alt text](/images/portfolio-screenshot.png)
+![alt text](/image/consloleIMG.png)
 
 
 ## Credits
@@ -35,6 +36,8 @@ I followed tutorials:
 [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 <br>
 [rows/columns array in java](https://stackoverflow.com/questions/34698144/how-to-get-rows-and-columns-count-of-a-2d-array-in-java)
+<br>
+[2D arrays](https://www.freecodecamp.org/news/javascript-2d-arrays/)
 <br>
 [total increase](https://stackoverflow.com/questions/34698144/how-to-get-rows-and-columns-count-of-a-2d-array-in-java)
 <br>

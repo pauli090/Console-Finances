@@ -87,6 +87,10 @@ var finances = [
   ['Feb-2017', 671099], 
 ];
 
+// Looging a title into the console
+
+console.log("Financial Analysis")
+console.log("---------------------")
 // Calculating the total number of months included in the dataset.
 
 var months = finances.length;
@@ -120,26 +124,37 @@ console.log("Average Change: " + average.toFixed(2));
 
 // Calculating greatest increase and decrease in Profit/Losses
 
-var difference = 0;  
-var mini = 0;
-var max = 0;
+var difference = 0; 
+
 var differencesList = [];
 
 for (var i = 0; i < finances.length - 1; i++) {
   
+  var month = finances[i+1][0];
   var currentDifference = finances[i+1][1] - finances[i][1];
 
   var eachDifference = difference + currentDifference;
 
-  differencesList.push(eachDifference);
-  
-  for (var j = 0; j < differencesList.length; j++) {
-    if (differencesList[j] > max) {
-      max = differencesList[j];
-    } else if (differencesList[j] < mini) {
-      mini = differencesList[j];
+  // pushing created variables into a new array
+
+  differencesList.push([month, eachDifference]);
+
+}    
+
+  //calculating greatest increase/decrease
+
+  var max = 0; 
+  var mini = 0;
+
+for (var j = 0; j < differencesList.length; j++) {
+  if (differencesList[j][1] > max) {
+    max = differencesList[j][1];
+  } else if (differencesList[j][1] < mini) {
+    mini = differencesList[j][1];
   }
 }
-}
- console.log("Greatest Increase in Profits/Losses: " + max);
- console.log("Greatest Decrease in Profits/Losses: " + mini);
+
+  // Logging greatest increase/decrease into the console
+
+ console.log("Greatest Increase in Profits/Losses: ($" + max + ")");
+ console.log("Greatest Decrease in Profits/Losses: ($" + mini + ")");
