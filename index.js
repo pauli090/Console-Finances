@@ -139,22 +139,26 @@ for (var i = 0; i < finances.length - 1; i++) {
 
   differencesList.push([month, eachDifference]);
 
-}    
+}
+
 
   //calculating greatest increase/decrease
-
+  var monthMax = "";
+  var monhMin = "";
   var max = 0; 
   var mini = 0;
 
 for (var j = 0; j < differencesList.length; j++) {
   if (differencesList[j][1] > max) {
     max = differencesList[j][1];
+    monthMax = differencesList[j][0]
   } else if (differencesList[j][1] < mini) {
     mini = differencesList[j][1];
+    monthMin = differencesList[j][0];
   }
 }
 
   // Logging greatest increase/decrease into the console
 
- console.log("Greatest Increase in Profits/Losses: ($" + max + ")");
- console.log("Greatest Decrease in Profits/Losses: ($" + mini + ")");
+ console.log("Greatest Increase in Profits/Losses: " + monthMax + " ($" + max + ")");
+ console.log("Greatest Decrease in Profits/Losses: " + monthMin + " ($" + mini + ")");
